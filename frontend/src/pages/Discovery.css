@@ -1,0 +1,60 @@
+.discovery-page {
+  padding: 48px 32px;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  min-height: calc(100vh - 70px);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.discovery-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.discovery-sub {
+  color: var(--text-secondary);
+  margin-top: 6px;
+  margin-bottom: 32px;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.subject-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subject-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+.subject-icon {
+  font-size: 36px;
+}
+
+.subject-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+@media (max-width: 700px) {
+  .subject-grid { grid-template-columns: 1fr; }
+}

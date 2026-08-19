@@ -1,0 +1,113 @@
+.formula-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.formula-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--subject-accent, #8b5cf6);
+  opacity: 0.8;
+  border-radius: 4px 0 0 4px;
+}
+
+.formula-card:hover {
+  border-color: var(--subject-accent, var(--border-color-hover));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--shadow-color);
+  background: var(--bg-card-hover);
+}
+
+.formula-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.formula-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.formula-icon {
+  color: var(--subject-accent, #8b5cf6);
+  flex-shrink: 0;
+}
+
+.formula-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.formula-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.formula-copy-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.formula-copy-btn.copied {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.formula-display-box {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow-x: auto;
+}
+
+:root[data-theme="light"] .formula-display-box {
+  background: #f1f5f9;
+  border: 1px dashed rgba(15, 23, 42, 0.15);
+}
+
+.formula-math {
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.formula-note {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
